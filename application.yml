@@ -25,6 +25,7 @@ spring:
   application:
     name: chserivcecloud-config-client
 
-eureka:30. client:
-  service-url:
-    defaultZone: http://eureka-test.com:7001/eureka/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-test.com:7001/eureka/
