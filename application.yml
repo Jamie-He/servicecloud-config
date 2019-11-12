@@ -3,12 +3,28 @@ spring:
     active:
       - dev
 ---
+server:
+  port: 8201
+
 spring:
   profiles: dev #开发环境
   application:
-    name: chserivcecloud-config-ch-dev
+    name: chserivcecloud-config-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-dev.com:7001/eureka/
+
 ---
+server:
+  port: 8202
+
 spring:
   profiles: test #测试环境
   application:
-    name: chserivcecloud-config-ch-test
+    name: chserivcecloud-config-client
+
+eureka:30. client:
+  service-url:
+    defaultZone: http://eureka-test.com:7001/eureka/
